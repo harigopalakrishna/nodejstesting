@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/15</span>
+        <span class='fraction'>15/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/15</span>
+        <span class='fraction'>15/15</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -80,28 +80,28 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const sinon = require('sinon')
 const request = require('request')
@@ -109,29 +109,29 @@ const expect = require('chai').expect
 &nbsp;
 const Fetcher = require('./fetcher')
 &nbsp;
-describe('Fetcher', <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  it('#getHeaders', <span class="fstat-no" title="function not covered" >function (done) {</span></span>
-<span class="cstat-no" title="statement not covered" >    const fetcher = Fetcher.create()</span>
-<span class="cstat-no" title="statement not covered" >    const sandbox = sinon.sandbox.create()</span>
-<span class="cstat-no" title="statement not covered" >    sandbox.stub(request, 'get', <span class="fstat-no" title="function not covered" >function (url, cb) {</span></span>
-<span class="cstat-no" title="statement not covered" >      cb(null, {</span>
+describe('Fetcher', function() {
+  it('#getHeaders', function (done) {
+    const fetcher = Fetcher.create()
+    const sandbox = sinon.sandbox.create()
+    sandbox.stub(request, 'get', function (url, cb) {
+      cb(null, {
         headers: {
           'someheader': 'somevalue'
         }
       })
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    fetcher.getHeaders('http://some.url', <span class="fstat-no" title="function not covered" >function (err, data) {</span></span>
-<span class="cstat-no" title="statement not covered" >      expect(data).to.eql({</span>
+    fetcher.getHeaders('http://some.url', function (err, data) {
+      expect(data).to.eql({
         'someheader': 'somevalue'
       })
-<span class="cstat-no" title="statement not covered" >      done()</span>
+      done()
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    sandbox.restore()</span>
+    sandbox.restore()
   })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  it('#getData')</span>
+  it('#getData')
 })
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -139,7 +139,7 @@ describe('Fetcher', <span class="fstat-no" title="function not covered" >functio
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 22 2017 10:00:22 GMT-0700 (MST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Feb 23 2017 12:43:10 GMT-0700 (MST)
 </div>
 </div>
 <script src="../prettify.js"></script>
